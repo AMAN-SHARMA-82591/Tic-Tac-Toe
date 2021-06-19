@@ -1,0 +1,128 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+}
+body{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.main-section{
+    text-align: center;
+    align-items: center;
+    padding:100px 0px 46px 0px;
+
+}
+@media screen and (max-height:664px){
+    .main-section{
+        padding:100px 0px 40px 0px;
+    }
+   
+}
+.main-heading p{
+    font-size:60px;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+}
+.box-1{
+    width:400px;
+    height:400px;
+    margin:50px auto 0px auto;
+    border: 2px solid transparent;
+    position:relative;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.box-1 > .box-cell{
+    width:132px;
+    height:132px;
+    border:1px solid black;
+    position:relative;
+}
+.cell-div-o{
+    position:absolute;
+    margin:12px;
+    width:80%;
+    height:80%;
+    border-radius: 50%;
+    border:13px solid black;
+    cursor:not-allowed;
+}
+.cell-div-x{
+    width:100%;
+    height:100%;
+    position:relative;
+    padding:55px 15px 20px 10px;
+    cursor:not-allowed;
+}
+
+.cell-div-x::before{
+    content: '';
+    display:block;
+    position:absolute;
+    width:110px;
+    height:15%;
+    background: black;
+    border-radius: 10%;
+    transform: rotate(-45deg);
+}
+.cell-div-x::after{
+    content: '';
+    display:block;
+    position:absolute;
+    width:110px;
+    height:15%;
+    background: black;
+    border-radius: 10%;
+    transform: rotate(45deg);
+}
+
+
+.box-cell:first-child,.box-cell:nth-child(2),.box-cell:nth-child(3){
+    border-top: none;
+}
+.box-cell:nth-child(3n+3){
+    border-right:none;
+}
+.box-cell:nth-child(3n+1){
+    border-left:none;
+}
+.box-cell:nth-child(n+7){
+    border-bottom:none;
+}
+
+.decision-section{
+    display :none;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    background:rgba(0, 0, 0, 0.863);
+    color:white;
+    z-index:1;
+    padding:250px 0px 0px 0px;
+    text-align: center;
+
+}
+.winner-text{
+    font-size:15vh;
+    letter-spacing: 1.5px;
+}
+.restart{
+    margin:20px 0px 0px 0px;
+    font-size:7vh;
+    letter-spacing:1.5px;
+    padding:8px 20px;
+    border:1px solid black;
+    transition-property: background,color,border;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+.restart:hover{
+    background:black;
+    color:white;
+    border:1px solid white;
+}
